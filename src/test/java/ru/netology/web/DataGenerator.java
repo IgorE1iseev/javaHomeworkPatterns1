@@ -39,6 +39,12 @@ public class DataGenerator {
         return faker.phoneNumber().phoneNumber();
     }
 
+    //Метод генерации неверного телефона из 5 цифр
+    public static String generateInvalidPhone(String locale) {
+        Faker faker = new Faker(new Locale(locale));
+        return faker.numerify("#####");
+    }
+
     public static class Registration {
         private Registration() {
         }
